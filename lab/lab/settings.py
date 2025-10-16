@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users'
+    'users',
+    'rest_framework',
    
 ]
 
@@ -132,3 +133,22 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# =========================================================================
+# CONFIGURACIÓN DE CORREO ELECTRÓNICO (Para notificaciones - Requerimiento E1)
+# ¡PEGA ESTO AQUÍ, AL FINAL DEL ARCHIVO!
+# =========================================================================
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+# REEMPLAZAR ESTOS VALORES
+EMAIL_HOST = 'smtp.gmail.com'          
+EMAIL_PORT = 587                       
+EMAIL_USE_TLS = True                   
+
+EMAIL_HOST_USER = 'tu_correo_de_envio@ejemplo.com' 
+EMAIL_HOST_PASSWORD = 'tu_contraseña_o_app_password' 
+
+DEFAULT_FROM_EMAIL = 'tu_correo_de_envio@ejemplo.com'
+
+
