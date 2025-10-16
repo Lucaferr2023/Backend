@@ -154,3 +154,17 @@ EMAIL_HOST_PASSWORD = 'tu_contraseña_o_app_password'
 DEFAULT_FROM_EMAIL = 'tu_correo_de_envio@ejemplo.com'
 
 
+# ********** CONFIGURACIÓN CORS (Solo para Desarrollo Local) **********
+
+# 1. Permite peticiones de cualquier origen (NECESARIO para que index.html funcione localmente)
+CORS_ALLOW_ALL_ORIGINS = True
+
+# 2. Si quieres ser más específico, puedes usar esta lista:
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:8000",
+#     "http://127.0.0.1:8000",
+#     # Si usas Live Server en VS Code, añade su puerto:
+#     # "http://127.0.0.1:5500",
+# ]
+
+# *******************************************************************
