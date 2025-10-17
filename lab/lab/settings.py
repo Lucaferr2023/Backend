@@ -84,13 +84,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         
-        # 1. ¡AQUÍ VA EL NOMBRE DE TU BASE DE DATOS!
         'NAME': 'labinfra',
         
-        # 2. Credenciales y Conexión (Asegúrate que sean correctas)
         'USER': 'postgres',      # Ej: 'postgres' o el usuario que creaste
         'PASSWORD': 'Lucaymathi_25', # La contraseña que te permite acceso a PostgreSQL
-        'HOST': 'localhost',                # O tu puerto si lo cambiaste, ej: '5433'
+        'HOST': 'localhost',                
         'PORT': '3634',
     }
 }
@@ -137,8 +135,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # =========================================================================
-# CONFIGURACIÓN DE CORREO ELECTRÓNICO (Para notificaciones - Requerimiento E1)
-# ¡PEGA ESTO AQUÍ, AL FINAL DEL ARCHIVO!
+# CONFIGURACIÓN DE CORREO ELECTRÓNICO 
 # =========================================================================
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -159,12 +156,3 @@ DEFAULT_FROM_EMAIL = 'tu_correo_de_envio@ejemplo.com'
 # 1. Permite peticiones de cualquier origen (NECESARIO para que index.html funcione localmente)
 CORS_ALLOW_ALL_ORIGINS = True
 
-# 2. Si quieres ser más específico, puedes usar esta lista:
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:8000",
-#     "http://127.0.0.1:8000",
-#     # Si usas Live Server en VS Code, añade su puerto:
-#     # "http://127.0.0.1:5500",
-# ]
-
-# *******************************************************************
