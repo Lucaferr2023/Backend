@@ -5,7 +5,8 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Usuario
 from .serializers import UsuarioSerializer
-from django.core.mail import send_mail # Importar la función de correo
+from django.core.mail import send_mail 
+from django.conf import settings
 
 # Vista para Listar y Crear Usuarios (GET y POST)
 class UsuarioListCreate(APIView):
@@ -38,17 +39,17 @@ class UsuarioListCreate(APIView):
                    f'Teléfono: {user_instance.telefono}')
         
         # Dirección del administrador o la que deba recibir la notificación
-        admin_email = 'administrador@ejemplo.com' 
+        admin_email = 'luca.ferreira@estudiantes.utec.edu.uy' 
         
         try:
             send_mail(
                 subject,
                 message,
-                # Usa la dirección configurada como remitente en settings.py
-                'servidor@tudominio.com', 
+                settings.DEFAULT_FROM_EMAIL, 
                 [admin_email],
                 fail_silently=False,
             )
             print(f"Notificación enviada a {admin_email} por el nuevo usuario: {user_instance.email}")
         except Exception as e:
             print(f"Error al enviar la notificación: {e}")
+            

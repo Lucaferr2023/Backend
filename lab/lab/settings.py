@@ -137,19 +137,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # =========================================================================
 # CONFIGURACIÓN DE CORREO ELECTRÓNICO 
 # =========================================================================
+# settings.py (Ejemplo con SendGrid)
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-# REEMPLAZAR ESTOS VALORES
-EMAIL_HOST = 'smtp.gmail.com'          
-EMAIL_PORT = 587                       
-EMAIL_USE_TLS = True                   
-
-EMAIL_HOST_USER = 'tu_correo_de_envio@ejemplo.com' 
-EMAIL_HOST_PASSWORD = 'tu_contraseña_o_app_password' 
-
-DEFAULT_FROM_EMAIL = 'tu_correo_de_envio@ejemplo.com'
-
+EMAIL_HOST = 'smtp.sendgrid.net' 
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+# Usa tu clave de API de SendGrid como contraseña
+EMAIL_HOST_PASSWORD = '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' 
+# Usa el correo que verificaste en SendGrid
+EMAIL_HOST_USER = 'apikey' # El usuario es siempre 'apikey' en SendGrid
+DEFAULT_FROM_EMAIL = 'luca.ferreira@estudiantes.utec.edu.uy'
 
 # ********** CONFIGURACIÓN CORS (Solo para Desarrollo Local) **********
 
