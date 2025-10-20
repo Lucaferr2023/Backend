@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'labinfra',
         
         'USER': 'postgres',      # Ej: 'postgres' o el usuario que creaste
-        'PASSWORD': 'Lucaymathi_25', # La contraseña que te permite acceso a PostgreSQL
+        'PASSWORD': '', # La contraseña que te permite acceso a PostgreSQL
         'HOST': 'localhost',              
         'PORT': '3634',
     }
