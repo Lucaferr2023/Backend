@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-# C:\Users\lucaf\OneDrive\Escritorio\GitHub\Backend\lab\lab\settings.py
+# C:\Users\lucaf\OneDrive\Escritorio\GitHub\Backend\lab\servicios-api\settings.py
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-ROOT_URLCONF = 'lab.urls'
+ROOT_URLCONF = 'servicios-api.urls'
 
 TEMPLATES = [
     {
@@ -72,13 +72,13 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'lab.wsgi.application'
+WSGI_APPLICATION = 'servicios-api.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# C:\Users\lucaf\OneDrive\Escritorio\GitHub\Backend\lab\lab\settings.py
+# C:\Users\lucaf\OneDrive\Escritorio\GitHub\Backend\lab\servicios-api\settings.py
 
 DATABASES = {
     'default': {
@@ -145,7 +145,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 # Usa tu clave de API de SendGrid como contraseña
-EMAIL_HOST_PASSWORD = 'SG.      ' 
+EMAIL_HOST_PASSWORD = 'SG' 
 # Usa el correo que verificaste en SendGrid
 EMAIL_HOST_USER = 'apikey' # El usuario es siempre 'apikey' en SendGrid
 DEFAULT_FROM_EMAIL = 'luca.ferreira@estudiantes.utec.edu.uy'
